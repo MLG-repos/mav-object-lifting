@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="control_frontal" type="control_frontal" name="control_frontal" output="screen">
+		<rosparam file="$(find control_frontal)/config/config.yaml" command="load" />
+        <remap from="/camera/image_raw" to="/ardrone/bottom/image_raw" />
+	</node>	
+
+</launch>
